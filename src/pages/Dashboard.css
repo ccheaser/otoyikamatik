@@ -1,0 +1,35 @@
+.dashboard {
+    display: flex;
+    position: relative; /* Sidebar'ın altında kalmasını önlemek için */
+}
+
+
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    margin-left: 200px; /* Sidebar genişliği kadar sol boşluk bırak */
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-header {
+    margin-bottom: 20px; /* Dashboard başlığı ve kutu arasında boşluk */
+}
+
+.dashboard-container {
+    flex-grow: 1;
+    background-color: rgba(255, 255, 255, 0.5); /* Daha opak arka plan */
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow: hidden;
+    z-index: 500; /* Kutunun sidebar altında kalmasını önlemek için */
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 20px;
+}

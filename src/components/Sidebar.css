@@ -1,0 +1,94 @@
+
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    color: #000000;
+    background-color: #ffffff;
+    padding-top: 20px;
+    position: fixed;
+    left: -200px; /* Sidebar başlangıçta gizli */
+    top: 0;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+
+    transition: left 0.3s ease; /* Açılma ve kapanma animasyonu */
+    
+}
+
+.brandName {
+    padding-left: 1em;
+    padding-top: 3em;
+    font-family: Rubik;
+    font-weight: 800;
+    font-size: 1.2em;
+    text-decoration-line: underline;
+    text-underline-offset: 10px;
+}
+
+.sidebar.open {
+    left: 0; /* Açıkken sol tarafa yanaşır */
+}
+
+.sidebarText {
+    color: #999898;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    padding-top: 2em;
+}
+
+.sidebar li {
+    width: 100%;
+    margin: 10px 0;
+    top: 100px;
+    color: #000000;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 18px;
+    display: block;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: left;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    font-family: Rubik;
+    font-weight: 700;
+
+}
+
+.sidebar a:hover {
+    color: #ffffff; /* Yazı rengi kırmızıya döner */
+    text-shadow: 0 0 8px #000000, 0 0 15px #000000; /* Glow efekti */
+}
+
+.burger-menu {
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    color: #000000;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 150px;
+        left: -150px; /* Küçük ekranlarda başlangıçta gizli */
+    }
+
+    .sidebar.open {
+        left: 0;
+    }
+
+    .burger-menu {
+        left: 10px;
+        top: 10px;
+    }
+}
